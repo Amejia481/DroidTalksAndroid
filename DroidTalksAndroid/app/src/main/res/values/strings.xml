@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DroidTalks</string>
+    <array name="main_activity_titles">
+        <item>Topics</item>
+        <item>Events</item>
+        <item>Creators</item>
+    </array>
+</resources>
