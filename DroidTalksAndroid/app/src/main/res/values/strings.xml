@@ -5,4 +5,14 @@
         <item>Events</item>
         <item>Creators</item>
     </array>
+    <string name="title_activity_main2">TopicsDetailActivity</string>
+    <string name="by">By:</string>
+    <string name="resources">Resources:</string>
+
+    <string translatable="false" name="link_template">&lt;a href="%1$s">%2$s&lt;/a></string>
+    <string name="slides">Slides</string>
+    <string name="topics">Topics</string>
+    <string name="events">Events</string>
+    <string name="creators">Creators</string>
+
 </resources>
