@@ -3,7 +3,7 @@ package com.arturomejiamarmol.droidtalks.data.disk
 import android.content.Context
 
 
-import com.arturomejiamarmol.droidtalks.data.CallBack
+import com.arturomejiamarmol.droidtalks.data.Callback
 import com.arturomejiamarmol.droidtalks.R
 import com.arturomejiamarmol.droidtalks.data.TalksRepository
 import com.arturomejiamarmol.droidtalks.data.Talk
@@ -48,12 +48,12 @@ class OnDiskTalksRepository(var context: Context) : TalksRepository {
                 loadJSON(context, R.raw.talks), listType)
     }
 
-    override fun getTalksByTopic(topic: String, callBack: CallBack<List<Talk>>) {
+    override fun getTalksByTopic(topic: String, callBack: Callback<List<Talk>>) {
         callBack.onFinish(talksByTopic[topic],null)
     }
 
 
-    override fun getAll(callBack: CallBack<List<Talk>>) {
+    override fun getAll(callBack: Callback<List<Talk>>) {
         callBack.onFinish(talks, null)
     }
 

@@ -1,5 +1,6 @@
 package com.arturomejiamarmol.droidtalks.data
 
+import com.arturomejiamarmol.droidtalks.data.firebase.EventsFirebaseRepository
 import com.arturomejiamarmol.droidtalks.data.firebase.TalksFirebaseRepo
 import com.arturomejiamarmol.droidtalks.data.firebase.TopicsFirebaseRepo
 
@@ -11,4 +12,6 @@ object Injection {
     val topicsRepository = TopicsFirebaseRepo()
 
     val talksRepository = TalksFirebaseRepo()
+
+    val eventsRepository = EventsFirebaseRepository()
 }

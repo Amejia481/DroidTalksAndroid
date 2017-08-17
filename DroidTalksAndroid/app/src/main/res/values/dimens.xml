@@ -9,4 +9,12 @@
     <dimen name="text_size_badge_count">20sp</dimen>
     <!--Resources Details-->
 
+    <!--Events Tab-->
+
+    <!--Events List Items-->
+    <dimen name="text_size_event_title">24sp</dimen>
+    <dimen name="text_size_event_content">23sp</dimen>
+    <!--Events List Items-->
+
+    <!--Events Tab-->
 </resources>

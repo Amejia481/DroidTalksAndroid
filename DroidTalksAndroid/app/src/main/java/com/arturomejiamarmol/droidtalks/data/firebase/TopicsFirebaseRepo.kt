@@ -1,6 +1,6 @@
 package com.arturomejiamarmol.droidtalks.data.firebase
 
-import com.arturomejiamarmol.droidtalks.data.CallBack
+import com.arturomejiamarmol.droidtalks.data.Callback
 import com.arturomejiamarmol.droidtalks.data.Topic
 import com.arturomejiamarmol.droidtalks.data.TopicsRepository
 import com.google.firebase.database.*
@@ -11,13 +11,13 @@ import com.google.firebase.database.*
 class TopicsFirebaseRepo : TopicsRepository {
 
 
-    val firebaseBD = FirebaseDatabase.getInstance()
+    private val firebaseBD = FirebaseDatabase.getInstance()
 
     init {
         firebaseBD.setPersistenceEnabled(true)
     }
 
-    override fun getAllTopics(callback: CallBack<List<Topic>>) {
+    override fun getAllTopics(callback: Callback<List<Topic>>) {
 
         val myRef = firebaseBD.getReference(NODE_TOPICS_TALKS).orderByValue()
 

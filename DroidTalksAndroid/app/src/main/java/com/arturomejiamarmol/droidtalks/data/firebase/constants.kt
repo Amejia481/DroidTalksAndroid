@@ -8,3 +8,4 @@ package com.arturomejiamarmol.droidtalks.data.firebase
 val NODE_TOPICS_TALKS = "topicsTalks"
 val NODE_TALKS = "talks"
 val NODE_TOPIC = "topic"
+val NODE_EVENTS = "events"

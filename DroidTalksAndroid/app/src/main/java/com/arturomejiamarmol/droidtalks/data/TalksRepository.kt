@@ -5,6 +5,6 @@ package com.arturomejiamarmol.droidtalks.data
  */
 
 interface TalksRepository {
-    fun getAll(callBack: CallBack<List<Talk>>)
-    fun getTalksByTopic(topic: String, callBack:CallBack<List<Talk>>)
+    fun getAll(callBack: Callback<List<Talk>>)
+    fun getTalksByTopic(topic: String, callBack: Callback<List<Talk>>)
 }

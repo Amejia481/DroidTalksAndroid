@@ -4,6 +4,7 @@ import android.content.Context
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
+import com.arturomejiamarmol.droidtalks.events.EventsFragment
 
 import com.arturomejiamarmol.droidtalks.topics.TopicsTalksFragment
 
@@ -13,9 +14,8 @@ import com.arturomejiamarmol.droidtalks.topics.TopicsTalksFragment
 
 class MainActivityTabPagerAdapter(fm: FragmentManager, val mContext: Context) : FragmentPagerAdapter(fm) {
 
-    private val tabTitles  = mContext.resources
-                .getStringArray(R.array.main_activity_titles)
-
+    private val tabTitles = mContext.resources
+            .getStringArray(R.array.main_activity_titles)
 
 
     override fun getPageTitle(position: Int): CharSequence {
@@ -23,11 +23,12 @@ class MainActivityTabPagerAdapter(fm: FragmentManager, val mContext: Context) : 
     }
 
     override fun getItem(position: Int): Fragment {
-        var fragment: Fragment
-        when (position) {
-            0 -> fragment = TopicsTalksFragment.newInstance(6)
-            else -> fragment = MainActivityPageFragment.newInstance(position)
-        }
+        val fragment =
+                when (position) {
+                    0 -> TopicsTalksFragment.newInstance(6)
+                    1 -> EventsFragment.newInstance()
+                    else -> MainActivityPageFragment.newInstance(position)
+                }
         return fragment
     }
 

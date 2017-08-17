@@ -1,6 +1,6 @@
 package com.arturomejiamarmol.droidtalks.topics;
 
-import com.arturomejiamarmol.droidtalks.data.CallBack;
+import com.arturomejiamarmol.droidtalks.data.Callback;
 import com.arturomejiamarmol.droidtalks.data.TalksRepository;
 import com.arturomejiamarmol.droidtalks.data.Topic;
 import com.arturomejiamarmol.droidtalks.data.TopicsRepository;
@@ -24,7 +24,7 @@ import static org.mockito.Mockito.verify;
 public class TopicsPresenterTest {
 
     @Captor
-    ArgumentCaptor<CallBack<List<Topic>>> mLoadNotesCallbackCaptor;
+    ArgumentCaptor<Callback<List<Topic>>> mLoadNotesCallbackCaptor;
 
     @Mock
     TopicsContract.View mockView;
