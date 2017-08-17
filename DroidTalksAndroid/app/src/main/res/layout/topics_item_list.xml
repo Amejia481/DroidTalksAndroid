@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/topic"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:fontFamily="@font/roboto_bold"
-    android:textColor="@android:color/black"
-    android:textStyle="bold"
     android:padding="@dimen/text_margin"
-    android:background="@android:color/background_light"
-    android:textSize="@dimen/text_size"
-    tools:text="Android Studio" />
+    android:orientation="horizontal">
 
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_badge_count"
+        android:textStyle="bold"
+        android:padding="@dimen/text_margin"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/topic"
+        android:layout_width="wrap_content"
+        android:padding="@dimen/text_margin"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold"
+        tools:text="Android Studio" />
+
+
+
+</LinearLayout>

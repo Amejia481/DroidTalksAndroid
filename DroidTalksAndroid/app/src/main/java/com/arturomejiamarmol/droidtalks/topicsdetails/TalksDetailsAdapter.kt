@@ -1,20 +1,19 @@
 package com.arturomejiamarmol.droidtalks.topicsdetails
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.text.Html
+import android.text.Spanned
 import android.text.method.LinkMovementMethod
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-
 import com.arturomejiamarmol.droidtalks.R
+import com.arturomejiamarmol.droidtalks.data.Speaker
 import com.arturomejiamarmol.droidtalks.data.Talk
 import com.arturomejiamarmol.droidtalks.ui.tools.getMatColor
-import android.text.Spanned
-import com.arturomejiamarmol.droidtalks.data.Speaker
 
 
 class TalksDetailsAdapter(private val talks: List<Talk>) : RecyclerView.Adapter<TalksDetailsAdapter.ViewHolder>() {
@@ -31,11 +30,7 @@ class TalksDetailsAdapter(private val talks: List<Talk>) : RecyclerView.Adapter<
         val authors = resource.speakers
         val context = holder.mName.context
 
-
-
-        holder.mName.setTextColor(getMatColor("900", holder.mView.context))
-
-        holder.mName.text = getLinkFromTemplateHTML(resource.video,resource.name,context)
+        holder.mName.text = getLinkFromTemplateHTML(resource.video, resource.name, context)
 
         holder.mAuthors.text = speakerToLinks(authors, context) //getLinkFromTemplate("http://www.google.com","Google",context)
         holder.mResources.text = getLinkFromTemplateHTML(resource.slides, context.getString(R.string.slides), context)
@@ -45,9 +40,7 @@ class TalksDetailsAdapter(private val talks: List<Talk>) : RecyclerView.Adapter<
         holder.mResources.movementMethod = LinkMovementMethod.getInstance()
 
         holder.mView.setOnClickListener({
-            it?.let {
-                TODO("OPEN LINK")
-            }
+            TODO("OPEN LINK")
         })
 
     }
@@ -70,9 +63,8 @@ class TalksDetailsAdapter(private val talks: List<Talk>) : RecyclerView.Adapter<
     private fun speakerToLinks(list: List<Speaker>, context: Context): CharSequence {
 
         return fromHtml(list.joinToString(separator = ",") {
-            (name, twitter) ->
 
-            getLinkFromTemplate(twitter, name, context)
+            getLinkFromTemplate(it.twitter, it.name, context)
 
         })
 
@@ -82,7 +74,6 @@ class TalksDetailsAdapter(private val talks: List<Talk>) : RecyclerView.Adapter<
     private fun getLinkFromTemplate(href: String, text: String, context: Context) = context.getString(R.string.link_template, href, text)
 
 
-    @SuppressWarnings("deprecation")
     private fun fromHtml(html: String): Spanned {
         val result: Spanned
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {

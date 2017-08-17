@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "391326964143",
+    "firebase_url": "https://shareme-13ef5.firebaseio.com",
+    "project_id": "shareme-13ef5",
+    "storage_bucket": "shareme-13ef5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391326964143:android:a753f0338ed658d0",
+        "android_client_info": {
+          "package_name": "com.arturomejiamarmol.droidtalks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391326964143-ja4t3ovisde4ahbgdupuol2b2k1cjsl1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arturomejiamarmol.droidtalks",
+            "certificate_hash": "bb83a34c632b553332ba70a29c57d895f7580bd5"
+          }
+        },
+        {
+          "client_id": "391326964143-3danintr5qsqglk3j8hi8o3o0q9ddc7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBmEXsS5Up4R__rbsvJa1F0WZ3M71Uhq0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391326964143-3danintr5qsqglk3j8hi8o3o0q9ddc7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,6 +2,7 @@ package com.arturomejiamarmol.droidtalks
 
 import com.arturomejiamarmol.droidtalks.data.CallBack
 import com.arturomejiamarmol.droidtalks.data.TalksRepository
+import com.arturomejiamarmol.droidtalks.data.Topic
 import com.arturomejiamarmol.droidtalks.data.TopicsRepository
 import com.arturomejiamarmol.droidtalks.topics.TopicsContract
 import com.arturomejiamarmol.droidtalks.topics.TopicsPresenter
@@ -24,10 +25,10 @@ class FailingTestKotlin {
     lateinit var mockView: TopicsContract.View
     lateinit var mockTalkRepo: TalksRepository
     lateinit var mockTopicsRepo: TopicsRepository
-    lateinit var TOPICS: List<String>
+    lateinit var TOPICS: List<Topic>
 
     @Captor
-    lateinit var mLoadNotesCallbackCaptor: ArgumentCaptor<CallBack<List<String>>>
+    lateinit var mLoadNotesCallbackCaptor: ArgumentCaptor<CallBack<List<Topic>>>
 
 
 
@@ -38,7 +39,8 @@ class FailingTestKotlin {
         mockUserActions =  mock(TopicsContract.UserActionListener::class.java)
         mockTalkRepo =  mock(TalksRepository::class.java)
         mockTopicsRepo =  mock(TopicsRepository::class.java)
-        TOPICS = listOf("Topic 1","Topic 2","Topic 3")
+        TOPICS = listOf(Topic("-KmOJ3kdKnoyhGL68X5x","Accessibility",4),Topic("-KmOJ3kjxUNlGOXr93na","Android IoT",16))
+
 
         presenter = TopicsPresenter(mockView,mockTopicsRepo,mockTalkRepo)
         MockitoAnnotations.initMocks(this)
@@ -52,7 +54,7 @@ class FailingTestKotlin {
 
         presenter.loadTopics()
 
-        val captor = argumentCaptor<CallBack<List<String>>>()
+        val captor = argumentCaptor<CallBack<List<Topic>>>()
 
 
 

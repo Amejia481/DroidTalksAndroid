@@ -5,8 +5,8 @@
     <dimen name="text_size">24sp</dimen>
     <dimen name="text_small_title">14sp</dimen>
 
-
-
-
+    <!--Resources Details-->
+    <dimen name="text_size_badge_count">20sp</dimen>
+    <!--Resources Details-->
 
 </resources>
