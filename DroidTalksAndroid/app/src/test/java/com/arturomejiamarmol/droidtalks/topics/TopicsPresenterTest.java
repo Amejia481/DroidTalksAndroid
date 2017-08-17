@@ -2,6 +2,7 @@ package com.arturomejiamarmol.droidtalks.topics;
 
 import com.arturomejiamarmol.droidtalks.data.CallBack;
 import com.arturomejiamarmol.droidtalks.data.TalksRepository;
+import com.arturomejiamarmol.droidtalks.data.Topic;
 import com.arturomejiamarmol.droidtalks.data.TopicsRepository;
 
 import org.junit.Before;
@@ -23,7 +24,7 @@ import static org.mockito.Mockito.verify;
 public class TopicsPresenterTest {
 
     @Captor
-    ArgumentCaptor<CallBack<List<String>>> mLoadNotesCallbackCaptor;
+    ArgumentCaptor<CallBack<List<Topic>>> mLoadNotesCallbackCaptor;
 
     @Mock
     TopicsContract.View mockView;
@@ -37,15 +38,15 @@ public class TopicsPresenterTest {
     @Mock
     TopicsRepository mockTopicsRepo;
 
-    List<String> TOPICS;
+    List<Topic> TOPICS;
     TopicsPresenter presenter;
 
     @Before
     public void setup() {
-        TOPICS = Arrays.asList(new String[]{"Topic 1", "Topic 2", "Topic 3"});
+
+        TOPICS = Arrays.asList(new Topic[]{new Topic("-KmOJ3kdKnoyhGL68X5x","Accessibility",4), new Topic("-KmOJ3kjxUNlGOXr93na","Android IoT",16)});
         MockitoAnnotations.initMocks(this);
         presenter = new TopicsPresenter(mockView, mockTopicsRepo, mockTalkRepo);
-
 
     }
 

@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.arturomejiamarmol.droidtalks.R
 import com.arturomejiamarmol.droidtalks.data.Injection
+import com.arturomejiamarmol.droidtalks.data.Topic
 import com.arturomejiamarmol.droidtalks.topicsdetails.TOPIC_NAME
 import com.arturomejiamarmol.droidtalks.topicsdetails.TopicsDetailsActivity
 
@@ -31,8 +32,7 @@ class TopicsTalksFragment : Fragment(), TopicsContract.View, OnListFragmentInter
     private var mColumnCount = 1
 
 
-
-    override fun showTopics(topics: List<String>) {
+    override fun showTopics(topics: List<Topic>) {
 
         recyclerView.adapter = TopicsAdapter(topics, this)
 
@@ -40,8 +40,8 @@ class TopicsTalksFragment : Fragment(), TopicsContract.View, OnListFragmentInter
 
     override fun showTalksOfThisTopic(topic: String) {
         val intent =
-                 Intent(context,TopicsDetailsActivity::class.java)
-                .putExtra(TOPIC_NAME, topic)
+                Intent(context, TopicsDetailsActivity::class.java)
+                        .putExtra(TOPIC_NAME, topic)
 
         startActivity(intent)
 
@@ -59,8 +59,6 @@ class TopicsTalksFragment : Fragment(), TopicsContract.View, OnListFragmentInter
             mColumnCount = arguments.getInt(ARG_COLUMN_COUNT)
         }
 
-
-        //TODO Add injectors
         presenter = TopicsPresenter(mTalkView = this,
                 mTalksRepo = Injection.talksRepository,
                 mTopicsRepo = Injection.topicsRepository)

@@ -1,16 +1,14 @@
 package com.arturomejiamarmol.droidtalks.data
 
-import com.arturomejiamarmol.droidtalks.App
-import com.arturomejiamarmol.droidtalks.data.disk.OnDiskTalksRepository
-import com.arturomejiamarmol.droidtalks.data.disk.OnDiskTopicsRepository
+import com.arturomejiamarmol.droidtalks.data.firebase.TalksFirebaseRepo
+import com.arturomejiamarmol.droidtalks.data.firebase.TopicsFirebaseRepo
 
 /**
  * Created by arturomejiamarmol on 7/14/17.
  */
 object Injection {
-    val topicsRepository: TopicsRepository
-        get() = OnDiskTopicsRepository(App.context)
 
-    val talksRepository: TalksRepository
-        get() = OnDiskTalksRepository(App.context)
+    val topicsRepository = TopicsFirebaseRepo()
+
+    val talksRepository = TalksFirebaseRepo()
 }

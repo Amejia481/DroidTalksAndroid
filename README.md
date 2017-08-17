@@ -30,6 +30,8 @@ The main idea behind this project is to be able to share interesting Android res
 + Lightweight class injection using build flavors
 + JVM tests
 + UI tests using Espresso
++ Firebase database
+
 ### Related Repository
 - [Droid Talks Web](https://github.com/Amejia481/DroidTalks)
 
