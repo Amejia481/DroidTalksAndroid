@@ -13,9 +13,13 @@ The main idea behind this project is to be able to share interesting Android res
 ## ResourcesDetailActivity
 <img src="https://raw.githubusercontent.com/Amejia481/DroidTalksAndroid/master/screenshots/resourceDetailsActivity.png" align="center" height="500px" width="282px"/>
 
+## EventsTabs
+<img src="https://raw.githubusercontent.com/Amejia481/DroidTalksAndroid/master/screenshots/eventsTab.png" align="center" height="500px" width="282px"/>
+
 ### Actual features:
 + Show all topics
 + Show detail resources by topic
++ Show events
 
 ### Future features:
 + Firebase Integration
@@ -27,7 +31,7 @@ The main idea behind this project is to be able to share interesting Android res
 + Model View Presenter (MVP)
 + Package by feature
 + Kotlin
-+ Lightweight class injection using build flavors
++ Lightweight class injection
 + JVM tests
 + UI tests using Espresso
 + Firebase database

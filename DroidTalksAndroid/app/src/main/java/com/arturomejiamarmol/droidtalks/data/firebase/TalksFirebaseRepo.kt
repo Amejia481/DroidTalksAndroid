@@ -1,6 +1,6 @@
 package com.arturomejiamarmol.droidtalks.data.firebase
 
-import com.arturomejiamarmol.droidtalks.data.CallBack
+import com.arturomejiamarmol.droidtalks.data.Callback
 import com.arturomejiamarmol.droidtalks.data.Talk
 import com.arturomejiamarmol.droidtalks.data.TalksRepository
 import com.google.firebase.database.DataSnapshot
@@ -13,14 +13,14 @@ import com.google.firebase.database.ValueEventListener
  */
 class TalksFirebaseRepo : TalksRepository {
 
-    val firebaseBD = FirebaseDatabase.getInstance()
+    private val firebaseBD = FirebaseDatabase.getInstance()
 
     init {
         firebaseBD.setPersistenceEnabled(true)
     }
 
 
-    override fun getAll(callBack: CallBack<List<Talk>>) {
+    override fun getAll(callBack: Callback<List<Talk>>) {
         val myRef = firebaseBD.getReference(NODE_TALKS)
 
         myRef.addValueEventListener(object : ValueEventListener {
@@ -43,7 +43,7 @@ class TalksFirebaseRepo : TalksRepository {
 
     }
 
-    override fun getTalksByTopic(topic: String, callBack: CallBack<List<Talk>>) {
+    override fun getTalksByTopic(topic: String, callBack: Callback<List<Talk>>) {
         val myRef = firebaseBD.getReference(NODE_TALKS).orderByChild(NODE_TOPIC).equalTo(topic)
 
         myRef.addValueEventListener(object : ValueEventListener {

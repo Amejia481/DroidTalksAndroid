@@ -1,6 +1,6 @@
 package com.arturomejiamarmol.droidtalks.topicsdetails
 
-import com.arturomejiamarmol.droidtalks.data.CallBack
+import com.arturomejiamarmol.droidtalks.data.Callback
 import com.arturomejiamarmol.droidtalks.data.Talk
 import com.arturomejiamarmol.droidtalks.data.TalksRepository
 
@@ -11,7 +11,7 @@ open class TopicsDetailsPresenter(private val talksRepo : TalksRepository, priva
 
     fun showTalksByTopic(topic: String){
 
-        talksRepo.getTalksByTopic(topic, CallBack<List<Talk>>({
+        talksRepo.getTalksByTopic(topic, Callback<List<Talk>>({
             data, error ->
 
             view.showTalks(data)

@@ -1,12 +1,8 @@
 package com.arturomejiamarmol.droidtalks.topicsdetails;
 
-import com.arturomejiamarmol.droidtalks.data.CallBack;
-import com.arturomejiamarmol.droidtalks.data.Speaker;
+import com.arturomejiamarmol.droidtalks.data.Callback;
 import com.arturomejiamarmol.droidtalks.data.Talk;
 import com.arturomejiamarmol.droidtalks.data.TalksRepository;
-import com.arturomejiamarmol.droidtalks.data.TopicsRepository;
-import com.arturomejiamarmol.droidtalks.topics.TopicsContract;
-import com.arturomejiamarmol.droidtalks.topics.TopicsPresenter;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -15,8 +11,6 @@ import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.mockito.ArgumentMatchers.anyString;
@@ -30,7 +24,7 @@ import static org.mockito.Mockito.verify;
 public class TopicsDetailPresenterTest {
 
     @Captor
-    ArgumentCaptor<CallBack<List<Talk>>> mLoadNotesCallbackCaptor;
+    ArgumentCaptor<Callback<List<Talk>>> mLoadNotesCallbackCaptor;
 
     @Mock
     TopicsDetailsContract.View mockView;

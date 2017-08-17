@@ -13,6 +13,9 @@ import android.widget.TextView
 import com.arturomejiamarmol.droidtalks.R
 import com.arturomejiamarmol.droidtalks.data.Speaker
 import com.arturomejiamarmol.droidtalks.data.Talk
+import com.arturomejiamarmol.droidtalks.data.ui.fromHtml
+import com.arturomejiamarmol.droidtalks.data.ui.getLinkFromTemplate
+import com.arturomejiamarmol.droidtalks.data.ui.getLinkFromTemplateHTML
 import com.arturomejiamarmol.droidtalks.ui.tools.getMatColor
 
 
@@ -70,17 +73,5 @@ class TalksDetailsAdapter(private val talks: List<Talk>) : RecyclerView.Adapter<
 
     }
 
-    private fun getLinkFromTemplateHTML(href: String, text: String, context: Context) = fromHtml(context.getString(R.string.link_template, href, text))
-    private fun getLinkFromTemplate(href: String, text: String, context: Context) = context.getString(R.string.link_template, href, text)
 
-
-    private fun fromHtml(html: String): Spanned {
-        val result: Spanned
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY)
-        } else {
-            result = Html.fromHtml(html)
-        }
-        return result
-    }
 }

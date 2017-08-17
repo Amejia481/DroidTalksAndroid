@@ -1,6 +1,6 @@
 package com.arturomejiamarmol.droidtalks.topics
 
-import com.arturomejiamarmol.droidtalks.data.CallBack
+import com.arturomejiamarmol.droidtalks.data.Callback
 import com.arturomejiamarmol.droidtalks.data.TalksRepository
 import com.arturomejiamarmol.droidtalks.data.Topic
 import com.arturomejiamarmol.droidtalks.data.TopicsRepository
@@ -12,7 +12,7 @@ open class TopicsPresenter(var mTalkView: TopicsContract.View, var mTopicsRepo: 
 
 
     override fun loadTopics() {
-        mTopicsRepo.getAllTopics(CallBack<List<Topic>> {
+        mTopicsRepo.getAllTopics(Callback<List<Topic>> {
             data, error ->
 
             mTalkView.showTopics(data)

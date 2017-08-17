@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/text_margin">
+
+    <TextView
+        android:id="@+id/event_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="@dimen/text_margin"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_event_title"
+        android:textStyle="bold"
+        tools:text="Android Studio" />
+
+
+    <TextView
+        android:id="@+id/event_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_size_event_title"
+        tools:text="2016" />
+
+
+</LinearLayout>

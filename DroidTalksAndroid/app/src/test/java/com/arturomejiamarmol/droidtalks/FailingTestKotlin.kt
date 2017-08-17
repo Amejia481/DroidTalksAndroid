@@ -1,6 +1,6 @@
 package com.arturomejiamarmol.droidtalks
 
-import com.arturomejiamarmol.droidtalks.data.CallBack
+import com.arturomejiamarmol.droidtalks.data.Callback
 import com.arturomejiamarmol.droidtalks.data.TalksRepository
 import com.arturomejiamarmol.droidtalks.data.Topic
 import com.arturomejiamarmol.droidtalks.data.TopicsRepository
@@ -28,7 +28,7 @@ class FailingTestKotlin {
     lateinit var TOPICS: List<Topic>
 
     @Captor
-    lateinit var mLoadNotesCallbackCaptor: ArgumentCaptor<CallBack<List<Topic>>>
+    lateinit var mLoadNotesCallbackCaptor: ArgumentCaptor<Callback<List<Topic>>>
 
 
 
@@ -54,7 +54,7 @@ class FailingTestKotlin {
 
         presenter.loadTopics()
 
-        val captor = argumentCaptor<CallBack<List<Topic>>>()
+        val captor = argumentCaptor<Callback<List<Topic>>>()
 
 
 
