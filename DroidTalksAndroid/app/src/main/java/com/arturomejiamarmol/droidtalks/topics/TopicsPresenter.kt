@@ -12,7 +12,7 @@ open class TopicsPresenter(var mTalkView: TopicsContract.View, var mTopicsRepo: 
 
 
     override fun loadTopics() {
-        mTopicsRepo.getAllTopics(Callback<List<Topic>> {
+        mTopicsRepo.getAllTopics(Callback {
             data, error ->
 
             mTalkView.showTopics(data)

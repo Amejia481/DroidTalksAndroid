@@ -1,12 +1,19 @@
-package com.arturomejiamarmol.droidtalks.data
+package com.arturomejiamarmol.droidtalks.talks
+
+import com.arturomejiamarmol.droidtalks.data.Speaker
+import com.google.firebase.database.Exclude
+import org.parceler.Parcel
 
 /**
  * Created by Arturo Mejia on 5/24/2017.
  */
 
+@Parcel
 class Talk{
-
-    //lateinit var id: String
+    @Exclude
+    @get:Exclude
+    @set:Exclude
+    lateinit var id: String
     lateinit var name: String
     lateinit var video: String
      var slides: String = ""

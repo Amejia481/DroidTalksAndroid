@@ -1,7 +1,7 @@
 package com.arturomejiamarmol.droidtalks.topicsdetails;
 
 import com.arturomejiamarmol.droidtalks.data.Callback;
-import com.arturomejiamarmol.droidtalks.data.Talk;
+import com.arturomejiamarmol.droidtalks.talks.Talk;
 import com.arturomejiamarmol.droidtalks.data.TalksRepository;
 
 import org.junit.Before;

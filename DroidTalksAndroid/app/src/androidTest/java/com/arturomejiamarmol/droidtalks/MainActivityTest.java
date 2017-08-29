@@ -4,7 +4,6 @@ import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,9 +27,6 @@ public class MainActivityTest {
     @Rule
     public ActivityTestRule<MainActivity> mMainActivityRule = new ActivityTestRule<>(MainActivity.class);
 
-    @Before
-    public void setUp() {
-    }
 
     @Test
     public void openMainActivityShouldShowTopics() {

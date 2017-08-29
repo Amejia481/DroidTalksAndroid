@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:theme="@style/AppThemeNonActionBar">
+        <activity android:name=".MainActivity" android:theme="@style/AppThemeNonActionBar"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -22,7 +23,7 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".topicsdetails.TopicsDetailsActivity"
+            android:name=".talks.TalksDetailsActivity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme"
             android:parentActivityName=".MainActivity" />

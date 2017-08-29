@@ -1,7 +1,7 @@
 package com.arturomejiamarmol.droidtalks.data.firebase
 
 import com.arturomejiamarmol.droidtalks.data.Callback
-import com.arturomejiamarmol.droidtalks.data.Talk
+import com.arturomejiamarmol.droidtalks.talks.Talk
 import com.arturomejiamarmol.droidtalks.data.TalksRepository
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -13,10 +13,11 @@ import com.google.firebase.database.ValueEventListener
  */
 class TalksFirebaseRepo : TalksRepository {
 
+
     private val firebaseBD = FirebaseDatabase.getInstance()
 
     init {
-        firebaseBD.setPersistenceEnabled(true)
+          firebaseBD.setPersistenceEnabled(true)
     }
 
 
@@ -30,9 +31,10 @@ class TalksFirebaseRepo : TalksRepository {
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                val talks = dataSnapshot.children.map {
-
-                    it.getValue<Talk>(Talk::class.java)
+                val talks = dataSnapshot.children.map { it ->
+                    var talk = it.getValue<Talk>(Talk::class.java)
+                    talk?.id = it.key
+                    talk
                 }
 
                 callBack.onFinish(talks as List<Talk>?, null)
@@ -62,4 +64,5 @@ class TalksFirebaseRepo : TalksRepository {
 
         })
     }
+
 }

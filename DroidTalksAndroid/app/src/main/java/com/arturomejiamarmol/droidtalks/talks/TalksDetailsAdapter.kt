@@ -1,10 +1,7 @@
-package com.arturomejiamarmol.droidtalks.topicsdetails
+package com.arturomejiamarmol.droidtalks.talks
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.support.v7.widget.RecyclerView
-import android.text.Html
-import android.text.Spanned
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
@@ -12,11 +9,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.arturomejiamarmol.droidtalks.R
 import com.arturomejiamarmol.droidtalks.data.Speaker
-import com.arturomejiamarmol.droidtalks.data.Talk
 import com.arturomejiamarmol.droidtalks.data.ui.fromHtml
 import com.arturomejiamarmol.droidtalks.data.ui.getLinkFromTemplate
 import com.arturomejiamarmol.droidtalks.data.ui.getLinkFromTemplateHTML
-import com.arturomejiamarmol.droidtalks.ui.tools.getMatColor
 
 
 class TalksDetailsAdapter(private val talks: List<Talk>) : RecyclerView.Adapter<TalksDetailsAdapter.ViewHolder>() {

@@ -10,5 +10,8 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="GridLayoutManager"
+    android:scrollbars="vertical"
+    android:scrollbarThumbVertical="@color/colorAccent"
+    android:scrollbarSize="5dp"
     tools:context="com.arturomejiamarmol.droidtalks.MainActivity"
     tools:listitem="@layout/topics_item_list"/>

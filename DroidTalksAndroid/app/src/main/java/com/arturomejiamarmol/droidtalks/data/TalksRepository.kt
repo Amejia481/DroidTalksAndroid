@@ -1,5 +1,7 @@
 package com.arturomejiamarmol.droidtalks.data
 
+import com.arturomejiamarmol.droidtalks.talks.Talk
+
 /**
  * Created by Arturo Mejia on 5/24/2017.
  */
