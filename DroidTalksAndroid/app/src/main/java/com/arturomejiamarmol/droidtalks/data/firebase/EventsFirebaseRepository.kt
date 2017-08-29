@@ -1,7 +1,6 @@
 package com.arturomejiamarmol.droidtalks.data.firebase
 
 import com.arturomejiamarmol.droidtalks.data.Callback
-import com.arturomejiamarmol.droidtalks.data.Talk
 import com.arturomejiamarmol.droidtalks.events.Event
 import com.arturomejiamarmol.droidtalks.events.EventsRepository
 import com.google.firebase.database.DataSnapshot

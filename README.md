@@ -13,18 +13,23 @@ The main idea behind this project is to be able to share interesting Android res
 ## ResourcesDetailActivity
 <img src="https://raw.githubusercontent.com/Amejia481/DroidTalksAndroid/master/screenshots/resourceDetailsActivity.png" align="center" height="500px" width="282px"/>
 
-## EventsTabs
+## EventsTab
 <img src="https://raw.githubusercontent.com/Amejia481/DroidTalksAndroid/master/screenshots/eventsTab.png" align="center" height="500px" width="282px"/>
 
+## CreatorsTab
+<img src="https://raw.githubusercontent.com/Amejia481/DroidTalksAndroid/master/screenshots/creatorsTab.png" align="center" height="500px" width="282px"/>
+
+## CreatorDetails
+<img src="https://raw.githubusercontent.com/Amejia481/DroidTalksAndroid/master/screenshots/creatorDetails.png" align="center" height="500px" width="282px"/>
+
 ### Actual features:
-+ Show all topics
-+ Show detail resources by topic
-+ Show events
++ Show all Topics
++ Show detail resources by Topic
++ Show all Events
++ Show Creators
++ Show detail resources by Creator
 
 ### Future features:
-+ Firebase Integration
-+ Show resources by creators
-+ Mark seen resources
 + CI
     
 ### App Architecture:

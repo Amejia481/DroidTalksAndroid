@@ -1,13 +1,12 @@
 package com.arturomejiamarmol.droidtalks.data.disk
 
+
 import android.content.Context
-
-
-import com.arturomejiamarmol.droidtalks.data.Callback
 import com.arturomejiamarmol.droidtalks.R
+import com.arturomejiamarmol.droidtalks.data.Callback
+import com.arturomejiamarmol.droidtalks.talks.Talk
 import com.arturomejiamarmol.droidtalks.data.TalksRepository
-import com.arturomejiamarmol.droidtalks.data.Talk
-import com.arturomejiamarmol.droidtalks.ui.tools.*
+import com.arturomejiamarmol.droidtalks.ui.tools.loadJSON
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
@@ -16,6 +15,7 @@ import com.google.gson.reflect.TypeToken
  */
 
 class OnDiskTalksRepository(var context: Context) : TalksRepository {
+
 
     private val talksByTopic: Map<String, MutableList<Talk>> by lazy {
         val map = mutableMapOf<String, MutableList<Talk>>()
